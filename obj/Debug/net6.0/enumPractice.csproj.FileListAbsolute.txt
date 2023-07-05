@@ -1,0 +1,15 @@
+C:\Users\TRA\Desktop\code_TRA\enumPractice\bin\Debug\net6.0\enumPractice.exe
+C:\Users\TRA\Desktop\code_TRA\enumPractice\bin\Debug\net6.0\enumPractice.deps.json
+C:\Users\TRA\Desktop\code_TRA\enumPractice\bin\Debug\net6.0\enumPractice.runtimeconfig.json
+C:\Users\TRA\Desktop\code_TRA\enumPractice\bin\Debug\net6.0\enumPractice.dll
+C:\Users\TRA\Desktop\code_TRA\enumPractice\bin\Debug\net6.0\enumPractice.pdb
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\enumPractice.csproj.AssemblyReference.cache
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\enumPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\enumPractice.AssemblyInfoInputs.cache
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\enumPractice.AssemblyInfo.cs
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\enumPractice.csproj.CoreCompileInputs.cache
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\enumPractice.dll
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\refint\enumPractice.dll
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\enumPractice.pdb
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\enumPractice.genruntimeconfig.cache
+C:\Users\TRA\Desktop\code_TRA\enumPractice\obj\Debug\net6.0\ref\enumPractice.dll
