@@ -119,15 +119,27 @@ namespace enumPractice
             Console.Write("Enter a number: ");
             int num = int.Parse(Console.ReadLine());
             convertInt convert = (convertInt)num;
-                if (convert == convertInt.Alpha)
+            if (convert == convertInt.Alpha)
+            {
+                Console.WriteLine(convert);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input");
+            }
+            //-------------T5-----------------
+            int duration = 1000;
+            for (int i = 0; i < 2; i++)
+            {
+                foreach (TrafficLight light in Enum.GetValues(typeof(TrafficLight)))
                 {
-                    Console.WriteLine(convert);
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input");
+                    Console.WriteLine("Current color: " + light);
+                    Thread.Sleep(duration);
                 }
             }
+            //-------------T6-----------------
+
+        }
         private static string getEnumDescription(Enum enums)
         {
             var field = enums.GetType().GetField(enums.ToString());
@@ -167,6 +179,12 @@ namespace enumPractice
             Alpha = 10,
             Beta = 28,
             Delta = 35,
+        }
+        public enum TrafficLight
+        {
+            Red,
+            Yellow,
+            Green
         }
     }
 }
