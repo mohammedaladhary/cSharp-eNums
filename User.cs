@@ -25,7 +25,7 @@ namespace enumPractice
         }
     }
 
-    enum Gender
+    public enum Gender
     {
         MALE,
         FEMALE,
@@ -33,7 +33,7 @@ namespace enumPractice
 
     }
 
-    enum CarType
+    public enum CarType
     {
         [Description("this is BASIC")]
         BASIC = 100,

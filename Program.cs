@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.ComponentModel;
 using System.Reflection;
 
@@ -9,7 +10,7 @@ namespace enumPractice
         static void Main(string[] args)
         {
             User user1 = new User("omar", 123, Gender.MALE, CarType.BASIC);
-            User user2 = new User("aisha", 120, Gender.FEMALE,CarType.PREMIUM);
+            User user2 = new User("aisha", 120, Gender.FEMALE, CarType.PREMIUM);
 
             //Console.WriteLine((int)user1.carType);
 
@@ -29,40 +30,70 @@ namespace enumPractice
             //Console.WriteLine(type.ToString());
 
             //------------------------A1-weekdays-------------------
-            Console.Write("Enter a day of the week: ");
-            string input = Console.ReadLine();
+            //Console.Write("Enter a day of the week: ");
+            //string input = Console.ReadLine();
 
-            if (Enum.TryParse(input, out DaysOfWeek dayOfWeek))
-            {
-                switch (dayOfWeek)
+            //if (Enum.TryParse(input, out DaysOfWeek dayOfWeek))
+            //{
+            //    switch (dayOfWeek)
+            //    {
+            //        case DaysOfWeek.Sunday:
+            //            Console.WriteLine("It's weekday.");
+            //            break;
+            //        case DaysOfWeek.Monday:
+            //            Console.WriteLine("It's weekday.");
+            //            break;
+            //        case DaysOfWeek.Tuesday:
+            //            Console.WriteLine("It's weekday.");
+            //            break;
+            //        case DaysOfWeek.Wednesday:
+            //            Console.WriteLine("It's weekday.");
+            //            break;
+            //        case DaysOfWeek.Thursday:
+            //            Console.WriteLine("It's a weekday.");
+            //            break;
+            //        case DaysOfWeek.Friday:
+            //            Console.WriteLine("It's weekend.");
+            //            break;
+            //        case DaysOfWeek.Saturday:
+            //            Console.WriteLine("It's weekend.");
+            //            break;
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid input. Please enter a valid day of the week.");
+            //}
+
+            //------------------------T2-------------------
+
+            Console.WriteLine("Enter a size of of your shirt: ");
+            string enterSize = Console.ReadLine();
+            ClothingSize size;
+            Enum.TryParse(enterSize, true, out size);
+           
+                if (size == ClothingSize.SMALL)
                 {
-                    case DaysOfWeek.Sunday:
-                        Console.WriteLine("It's weekday.");
-                        break;
-                    case DaysOfWeek.Monday:
-                        Console.WriteLine("It's weekday.");
-                        break;
-                    case DaysOfWeek.Tuesday:
-                        Console.WriteLine("It's weekday.");
-                        break;
-                    case DaysOfWeek.Wednesday:
-                        Console.WriteLine("It's weekday.");
-                        break;
-                    case DaysOfWeek.Thursday:
-                        Console.WriteLine("It's a weekday.");
-                        break;
-                    case DaysOfWeek.Friday:
-                        Console.WriteLine("It's weekend.");
-                        break;
-                    case DaysOfWeek.Saturday:
-                        Console.WriteLine("It's weekend.");
-                        break;
+                    Console.WriteLine("Your size is Small.");
                 }
-            }
+                else if (size == ClothingSize.MEDIUM)
+                {
+                    Console.WriteLine("Your size is Medium.");
+                }
+                else if (size == ClothingSize.LARGE)
+                {
+                    Console.WriteLine("Your size is Large.");
+                }
+                else if (size == ClothingSize.XLARGE)
+                {
+                    Console.WriteLine("Your size is XLarge.");
+                }
             else
             {
-                Console.WriteLine("Invalid input. Please enter a valid day of the week.");
+                Console.WriteLine("That is not a valid clothing size.");
             }
+        
+            
         }
         private static string getEnumDescription(Enum enums)
         {
@@ -72,8 +103,8 @@ namespace enumPractice
         }
     }
     //------------------------A1-weekdays-------------------
-        enum DaysOfWeek
-        {
+    public enum DaysOfWeek
+    {
         Sunday,
         Monday,
         Tuesday,
@@ -83,5 +114,12 @@ namespace enumPractice
         Saturday
     }
 
-
+    public enum ClothingSize
+    {
+        SMALL,
+        MEDIUM,
+        LARGE,
+        XLARGE,
+        XXLARGE
+    }
 }
