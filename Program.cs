@@ -67,89 +67,106 @@ namespace enumPractice
 
             //------------------------T2-------------------
 
-            Console.WriteLine("Enter a size of of your shirt: ");
-            string enterSize = Console.ReadLine();
-            ClothingSize size;
+            //Console.WriteLine("Enter a size of of your shirt: ");
+            //string enterSize = Console.ReadLine();
+            //ClothingSize size;
 
-            if (Enum.TryParse(enterSize, true, out size))
-            {
-                if (size == ClothingSize.SMALL)
-                {
-                    Console.WriteLine("Your size is Small.");
-                }
-                else if (size == ClothingSize.MEDIUM)
-                {
-                    Console.WriteLine("Your size is Medium.");
-                }
-                else if (size == ClothingSize.LARGE)
-                {
-                    Console.WriteLine("Your size is Large.");
-                }
-                else if (size == ClothingSize.XLARGE)
-                {
-                    Console.WriteLine("Your size is XLarge.");
-                }
-            }
-            else
-            {
-                Console.WriteLine("That is not a valid clothing size.");
-            }
-            //---------------T3----------------
-            Console.Write("Enter your color: ");
-            string inputColor = Console.ReadLine();
-            FavoriteColor favoriteColor = (FavoriteColor)Enum.Parse(typeof(FavoriteColor),inputColor);
+            //if (Enum.TryParse(enterSize, true, out size))
+            //{
+            //    if (size == ClothingSize.SMALL)
+            //    {
+            //        Console.WriteLine("Your size is Small.");
+            //    }
+            //    else if (size == ClothingSize.MEDIUM)
+            //    {
+            //        Console.WriteLine("Your size is Medium.");
+            //    }
+            //    else if (size == ClothingSize.LARGE)
+            //    {
+            //        Console.WriteLine("Your size is Large.");
+            //    }
+            //    else if (size == ClothingSize.XLARGE)
+            //    {
+            //        Console.WriteLine("Your size is XLarge.");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("That is not a valid clothing size.");
+            //}
+            ////---------------T3----------------
+            //Console.Write("Enter your color: ");
+            //string inputColor = Console.ReadLine();
+            //FavoriteColor favoriteColor = (FavoriteColor)Enum.Parse(typeof(FavoriteColor), inputColor);
 
-            if (favoriteColor == FavoriteColor.Red)
-            {
-                Console.WriteLine("Your favorite color is red");
-                }
-            else if (favoriteColor == FavoriteColor.Blue)
-            {
-                Console.WriteLine("Your favorite color is Blue");
-            }
-            else if (favoriteColor == FavoriteColor.Green)
-            {
-                Console.WriteLine("Your favorite color is Green");
-            }
-            else
-            {
-                Console.WriteLine("That is not a valid favorite color.");
-                }
+            //if (favoriteColor == FavoriteColor.Red)
+            //{
+            //    Console.WriteLine("Your favorite color is red");
+            //}
+            //else if (favoriteColor == FavoriteColor.Blue)
+            //{
+            //    Console.WriteLine("Your favorite color is Blue");
+            //}
+            //else if (favoriteColor == FavoriteColor.Green)
+            //{
+            //    Console.WriteLine("Your favorite color is Green");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("That is not a valid favorite color.");
+            //}
             //---------T4------------------
-
-        }
+            Console.Write("Enter a number: ");
+            int num = int.Parse(Console.ReadLine());
+            convertInt convert = (convertInt)num;
+                if (convert == convertInt.Alpha)
+                {
+                    Console.WriteLine(convert);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input");
+                }
+            }
         private static string getEnumDescription(Enum enums)
         {
             var field = enums.GetType().GetField(enums.ToString());
             var attribute = Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) as DescriptionAttribute;
             return attribute != null ? attribute.Description : enums.ToString();
         }
-    }
-    //------------------------A1-weekdays-------------------
-    public enum DaysOfWeek
-    {
-        Sunday,
-        Monday,
-        Tuesday,
-        Wednesday,
-        Thursday,
-        Friday,
-        Saturday
-    }
+        
+        //------------------------A1-weekdays-------------------
+        public enum DaysOfWeek
+        {
+            Sunday,
+            Monday,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday,
+            Saturday
+        }
 
-    public enum ClothingSize
-    {
-        SMALL,
-        MEDIUM,
-        LARGE,
-        XLARGE,
-        XXLARGE
-    }
-    public enum FavoriteColor
-    {
-        Red,
-        Blue,
-        Green,
-        White
+        public enum ClothingSize
+        {
+            SMALL,
+            MEDIUM,
+            LARGE,
+            XLARGE,
+            XXLARGE
+        }
+        public enum FavoriteColor
+        {
+            Red,
+            Blue,
+            Green,
+            White
+        }
+        public enum convertInt
+        {
+            Alpha = 10,
+            Beta = 28,
+            Delta = 35,
+        }
     }
 }
