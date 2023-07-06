@@ -70,8 +70,9 @@ namespace enumPractice
             Console.WriteLine("Enter a size of of your shirt: ");
             string enterSize = Console.ReadLine();
             ClothingSize size;
-            Enum.TryParse(enterSize, true, out size);
-           
+
+            if (Enum.TryParse(enterSize, true, out size))
+            {
                 if (size == ClothingSize.SMALL)
                 {
                     Console.WriteLine("Your size is Small.");
@@ -88,12 +89,34 @@ namespace enumPractice
                 {
                     Console.WriteLine("Your size is XLarge.");
                 }
+            }
             else
             {
                 Console.WriteLine("That is not a valid clothing size.");
             }
-        
-            
+            //---------------T3----------------
+            Console.Write("Enter your color: ");
+            string inputColor = Console.ReadLine();
+            FavoriteColor favoriteColor = (FavoriteColor)Enum.Parse(typeof(FavoriteColor),inputColor);
+
+            if (favoriteColor == FavoriteColor.Red)
+            {
+                Console.WriteLine("Your favorite color is red");
+                }
+            else if (favoriteColor == FavoriteColor.Blue)
+            {
+                Console.WriteLine("Your favorite color is Blue");
+            }
+            else if (favoriteColor == FavoriteColor.Green)
+            {
+                Console.WriteLine("Your favorite color is Green");
+            }
+            else
+            {
+                Console.WriteLine("That is not a valid favorite color.");
+                }
+            //---------T4------------------
+
         }
         private static string getEnumDescription(Enum enums)
         {
@@ -121,5 +144,12 @@ namespace enumPractice
         LARGE,
         XLARGE,
         XXLARGE
+    }
+    public enum FavoriteColor
+    {
+        Red,
+        Blue,
+        Green,
+        White
     }
 }
